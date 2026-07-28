@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="preconnect" href="https://api.counterapi.dev">
+    <link rel="dns-prefetch" href="https://api.counterapi.dev">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0a0b0f">
+    <meta name="description" content="Free random number generator — pick a random number between any range. Perfect for raffles, games, and decisions. Instant, no download.">
+    <meta name="keywords" content="random number generator, random picker, number generator, raffle picker, random number">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://jimmywithfiona.com/random-number-generator/">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1840337371416691" crossorigin="anonymous"></script>
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Random Number Generator">
+    <meta property="og:title" content="Random Number Generator — Pick a Number Free">
+    <meta property="og:description" content="Generate random numbers within any range. Perfect for raffles, games, and decisions.">
+    <meta property="og:url" content="https://jimmywithfiona.com/random-number-generator/">
+    <meta property="og:image" content="https://jimmywithfiona.com/random-number-generator/og.png">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Random Number Generator — Free Online | Pick a Number">
+    <meta name="twitter:description" content="Free random number generator — pick a random number between any range. Perfect for raffles, games, and decisions. Instant, no download.">
+    <meta name="twitter:image" content="https://jimmywithfiona.com/random-number-generator/og.png">
+    <title>Random Number Generator — Free Online | Pick a Number</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"WebApplication","name":"Random Number Generator","url":"https://jimmywithfiona.com/random-number-generator/","description":"Free online random number generator. Pick a random number within any range.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any (Web Browser)","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How does the random number generator work?","acceptedAnswer":{"@type":"Answer","text":"Enter a minimum and maximum value, then click Generate. The tool picks a random number within your range using JavaScript's random number generator."}},{"@type":"Question","name":"Is the random number truly random?","acceptedAnswer":{"@type":"Answer","text":"It uses a pseudo-random number generator, which is sufficient for games, raffles, and everyday use. For cryptographic security, use a dedicated tool."}}]}
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://jimmywithfiona.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Random Number Generator", "item": "https://jimmywithfiona.com/random-number-generator/" }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Random Number Generator",
+      "url": "https://jimmywithfiona.com/random-number-generator/",
+      "isPartOf": { "@type": "WebSite", "name": "Random Number Generator", "url": "https://jimmywithfiona.com/random-number-generator/" }
+    }
+    </script>
+
+</head>
+<body>
+<nav class="navbar">
+    <a class="brand" href="/random-number-generator/">🎲 Random Number Generator</a>
+    <div class="nav-links">
+        <a href="/random-number-generator/" class="active">Generate</a>
+        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="contact.html">Contact</a>
+        <a href="/">🏠 Home</a>
+    </div>
+</nav>
+<main>
+    <h1>Random Number Generator 🎲</h1>
+    <p class="subtitle">Pick a random number within any range — instant and free.</p>
+    <div class="tool-card">
+        <div class="form-row">
+            <label>Min</label>
+            <input type="number" id="minVal" value="1" inputmode="decimal" aria-label="Minimum value">
+        </div>
+        <div class="form-row">
+            <label>Max</label>
+            <input type="number" id="maxVal" value="100" inputmode="decimal" aria-label="Maximum value">
+        </div>
+        <div class="form-row">
+            <label>Count</label>
+            <input type="number" id="countVal" value="1" min="1" max="100" inputmode="decimal" aria-label="How many numbers to generate">
+        </div>
+        <div class="form-row">
+            <label style="min-width:auto;display:flex;align-items:center;gap:0.4rem;cursor:pointer;">
+                <input type="checkbox" id="noRepeat" style="width:auto;"> No repeats
+            </label>
+        </div>
+        <button class="btn btn-large" onclick="generate()">🎲 Generate</button>
+    </div>
+    <div class="rn-result" id="result">—</div>
+    <div class="rn-history" id="history"></div>
+    <div class="stats">👁️ Views <strong id="pv">-</strong><span class="stat-divider">|</span>👤 Visitors <strong id="uv">-</strong></div>
+    <div class="seo-section">
+        <h2>Random Number Generator</h2>
+        <p>Generate random numbers instantly within any range you specify. Whether you need a single number or multiple, with or without repeats, this free tool handles it all in your browser.</p>
+        <h2>Use Cases</h2>
+        <ul>
+            <li><strong>Raffles and giveaways</strong> — Pick a fair winner randomly</li>
+            <li><strong>Games and decisions</strong> — Can't decide? Let randomness decide</li>
+            <li><strong>Lottery numbers</strong> — Generate random lottery picks</li>
+            <li><strong>Teaching</strong> — Random student selection or math exercises</li>
+            <li><strong>Testing</strong> — Generate test data or random samples</li>
+        </ul>
+        <h2>How to Use</h2>
+        <p>Enter your minimum and maximum values. Choose how many numbers to generate and whether to allow repeats. Click Generate to get your random numbers instantly.</p>
+        <h2>Frequently Asked Questions</h2>
+        <p><strong>How does the random number generator work?</strong> — It uses your browser's built-in random generator to produce unpredictable numbers within your specified range.</p>
+        <p><strong>Can I generate multiple numbers at once?</strong> — Yes, you can generate multiple numbers with or without repeats.</p>
+        <p><strong>Is it truly random?</strong> — It uses a high-quality pseudo-random algorithm suitable for raffles, games, and general use.</p>
+    </div>
+</main>
+<footer>
+    <p><a href="about.html">About</a> · <a href="privacy.html">Privacy</a> · <a href="contact.html">Contact</a> · <a href="/">Home</a></p>
+    <p style="margin-top:0.4rem;">Random Number Generator © 2026 · Free Random Number Generator</p>
+<div style="margin-top:0.6rem;font-size:0.72rem;opacity:0.6;"><a href="https://jimmywithfiona.com/">JimmyWithFiona — Home</a></div>
+</footer>
+<script defer src="js/counter.js"></script>
+<script>
+let history = [];
+
+function generate() {
+    const min = parseInt(document.getElementById("minVal").value);
+    const max = parseInt(document.getElementById("maxVal").value);
+    const count = Math.min(100, Math.max(1, parseInt(document.getElementById("countVal").value) || 1));
+    const noRepeat = document.getElementById("noRepeat").checked;
+
+    if (isNaN(min) || isNaN(max)) return;
+    if (min > max) { alert("Minimum must be less than maximum."); return; }
+    if (noRepeat && (max - min + 1) < count) { alert("Range too small for " + count + " unique numbers without repeats."); return; }
+
+    const results = [];
+    const used = new Set();
+    let attempts = 0;
+    while (results.length < count && attempts < 10000) {
+        const num = Math.floor(Math.random() * (max - min + 1)) + min;
+        if (noRepeat && used.has(num)) { attempts++; continue; }
+        used.add(num);
+        results.push(num);
+        attempts++;
+    }
+
+    const resultEl = document.getElementById("result");
+    if (count === 1) {
+        // Animate
+        let i = 0;
+        const interval = setInterval(() => {
+            resultEl.textContent = Math.floor(Math.random() * (max - min + 1)) + min;
+            i++;
+            if (i > 10) { clearInterval(interval); resultEl.textContent = results[0]; addToHistory(results[0]); }
+        }, 50);
+    } else {
+        resultEl.textContent = results.join(", ");
+        addToHistory(results.join(", "));
+    }
+}
+
+function addToHistory(val) {
+    history.unshift(val);
+    if (history.length > 10) history.pop();
+    document.getElementById("history").innerHTML = history.map(h => `<div class="rn-history-item">${h}</div>`).join("");
+}
+
+// Enter key
+document.querySelectorAll("input").forEach(input => {
+    input.addEventListener("keydown", e => { if (e.key === "Enter") generate(); });
+});
+</script>
+</body>
+</html>
