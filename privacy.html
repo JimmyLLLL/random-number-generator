@@ -39,5 +39,35 @@
 </main>
 <footer><p>© 2026 Random Number Generator · <a href="/">Home</a></p></footer>
 <script src="js/counter.js" defer></script>
+<!-- I18N-FULL -->
+<script>
+(function(){
+var lang=(navigator.language||navigator.userLanguage||'en').toLowerCase();
+if(!lang.startsWith('zh'))return;
+var ZH={"🎲 Random Number Generator":"🎲 随机数生成器","Generate":"生成","About":"关于","Privacy":"隐私","Contact":"联系","🏠 Home":"🏠 首页","Privacy Policy":"隐私政策","Last updated: July 28, 2026":"最后更新：2026年7月28日","Your data is 100% private.":"你的数据100%私密。","All processing happens locally in your browser. No data is ever uploaded to any server.":"所有处理均在你的浏览器本地完成。数据绝不会上传到任何服务器。","1. Data Processing":"1. 数据处理","All calculations and processing happen entirely within your browser session. No data leaves your device.":"所有计算和处理完全在你的浏览器会话中进行。数据不会离开你的设备。","2. Third-Party Services":"2. 第三方服务","GitHub Pages — hosting (static files only)":"GitHub Pages — 托管（仅静态文件）","Google AdSense — may show ads":"Google AdSense — 可能显示广告","Counter API — anonymous view counting":"Counter API — 匿名浏览计数","3. Advertising":"3. 广告","Google AdSense may use cookies. Manage at":"Google AdSense 可能使用 Cookie。管理地址：","Google Ad Settings":"Google 广告设置","4. Contact":"4. 联系方式","Questions? Visit our":"有疑问？请访问我们的","contact page":"联系页面","👁️ Views":"👁️ 浏览量","👤 Visitors":"👤 访客数","© 2026 Random Number Generator ·":"© 2026 随机数生成器 ·","Home":"首页"};
+function walk(node){
+if(node.nodeType===3){
+var t=node.textContent,k=t.trim();
+if(k&&ZH[k]){node.textContent=t.replace(k,ZH[k])}
+}else if(node.nodeType===1&&node.tagName!=='SCRIPT'&&node.tagName!=='STYLE'&&node.tagName!=='NOSCRIPT'){
+if(node.childNodes.length>1){
+var full=node.textContent.trim();
+if(ZH[full]){node.textContent=ZH[full];return}
+}
+for(var i=0;i<node.childNodes.length;i++){walk(node.childNodes[i])}
+}
+}
+walk(document.body);
+document.documentElement.lang='zh-CN';
+var mo=new MutationObserver(function(muts){
+muts.forEach(function(m){
+if(m.type==='childList'){m.addedNodes.forEach(function(n){walk(n)})}
+else if(m.type==='characterData'){walk(m.target)}
+});
+});
+mo.observe(document.body,{childList:true,subtree:true,characterData:true});
+})();
+</script>
+<!-- /I18N-FULL -->
 </body>
 </html>

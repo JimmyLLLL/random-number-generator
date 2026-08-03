@@ -38,5 +38,35 @@
 </main>
 <footer><p>© 2026 Random Number Generator · <a href="/">Home</a></p></footer>
 <script src="js/counter.js" defer></script>
+<!-- I18N-FULL -->
+<script>
+(function(){
+var lang=(navigator.language||navigator.userLanguage||'en').toLowerCase();
+if(!lang.startsWith('zh'))return;
+var ZH={"🎲 Random Number Generator":"🎲 随机数生成器","Generate":"生成","About":"关于","Privacy":"隐私","Contact":"联系","🏠 Home":"🏠 首页","About Random Number Generator":"关于随机数生成器","Free random number generator. Pick a random number within any range instantly. No signup, runs in your browser. All processing happens locally in your browser — no signup, no upload, no data collection.":"免费的随机数生成器。在任何范围内即时选取随机数。无需注册，在浏览器中运行。所有处理均在你的浏览器本地完成 — 无需注册、无需上传、不收集数据。","Privacy First":"隐私优先","All processing happens locally in your browser. We don't store your data, track your inputs, or require any personal information.":"所有处理均在你的浏览器本地完成。我们不存储你的数据、追踪你的输入，也不要求任何个人信息。","Use Random Number Generator →":"使用随机数生成器 →","👁️ Views":"👁️ 浏览量","👤 Visitors":"👤 访客数","© 2026 Random Number Generator ·":"© 2026 随机数生成器 ·","Home":"首页"};
+function walk(node){
+if(node.nodeType===3){
+var t=node.textContent,k=t.trim();
+if(k&&ZH[k]){node.textContent=t.replace(k,ZH[k])}
+}else if(node.nodeType===1&&node.tagName!=='SCRIPT'&&node.tagName!=='STYLE'&&node.tagName!=='NOSCRIPT'){
+if(node.childNodes.length>1){
+var full=node.textContent.trim();
+if(ZH[full]){node.textContent=ZH[full];return}
+}
+for(var i=0;i<node.childNodes.length;i++){walk(node.childNodes[i])}
+}
+}
+walk(document.body);
+document.documentElement.lang='zh-CN';
+var mo=new MutationObserver(function(muts){
+muts.forEach(function(m){
+if(m.type==='childList'){m.addedNodes.forEach(function(n){walk(n)})}
+else if(m.type==='characterData'){walk(m.target)}
+});
+});
+mo.observe(document.body,{childList:true,subtree:true,characterData:true});
+})();
+</script>
+<!-- /I18N-FULL -->
 </body>
 </html>
